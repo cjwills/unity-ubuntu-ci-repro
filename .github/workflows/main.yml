@@ -23,5 +23,5 @@ jobs:
       - name: Upload apk
         uses: actions/upload-artifact@v3
         with:
-          name: appxupload
+          name: apk
           path: build/Android/Android.apk
