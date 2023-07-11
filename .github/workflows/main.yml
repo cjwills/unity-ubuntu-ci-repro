@@ -19,16 +19,9 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
-                                
-      - name: Find apk
-        id: find_file
-        shell: pwsh
-        run: |
-          $file = (Get-ChildItem -Path .\ -Filter build/**/*.apk -Recurse -File -Name)
-          echo "UPLOAD_FILE_PATH=$file" >> "$env:GITHUB_OUTPUT"
       
       - name: Upload apk
         uses: actions/upload-artifact@v3
         with:
           name: appxupload
-          path: ${{ steps.find_file.outputs.UPLOAD_FILE_PATH }}
+          path: build/Android/Android.apk
