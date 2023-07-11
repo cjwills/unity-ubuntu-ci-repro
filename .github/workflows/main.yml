@@ -24,7 +24,7 @@ jobs:
         id: find_file
         shell: pwsh
         run: |
-          $file = (Get-ChildItem -Path .\ -Filter *.apk -Recurse -File -Name)
+          $file = (Get-ChildItem -Path .\ -Filter build/**/*.apk -Recurse -File -Name)
           echo "UPLOAD_FILE_PATH=$file" >> "$env:GITHUB_OUTPUT"
       
       - name: Upload apk
