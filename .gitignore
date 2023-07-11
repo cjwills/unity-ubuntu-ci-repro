@@ -1,0 +1,6 @@
+*.csproj
+Library/
+Logs/
+Temp/
+UserSettings/
+My project.sln
