@@ -7,6 +7,6 @@ public class TestPreprocessor : IPreprocessBuildWithReport
 
     public void OnPreprocessBuild(BuildReport report)
     {
-        UnityEngine.Debug.Log($"{nameof(TestPreprocessor)} ({nameof(IPreprocessBuildWithReport)} running successfully");
+        UnityEngine.Debug.Log($"{nameof(TestPreprocessor)} ({nameof(IPreprocessBuildWithReport)}) running successfully");
     }
 }
